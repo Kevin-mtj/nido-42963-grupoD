@@ -6,7 +6,8 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 
 | Integrante | Rol | Requisitos o tareas | Revisa los PR de |
 |---|---|---|---|
-| Bryan Joel Coaquira Mamani | Dev 1  | R1 | Kevin Jolver  |
+| Bryan Joel Coaquira Mamani | Dev 1  | R1, R2 | Kevin Jolver  |
+| Kevin Jolver Montañez Taype | Dev 2  | R3, R4 | Bryan Joel |
 
 ## Como trabajamos
 
