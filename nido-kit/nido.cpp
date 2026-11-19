@@ -9,6 +9,7 @@
    NRC        : 42963
    Grupo      : D
    Integrantes: Bryan Joel Coaquira Mamani 
+                Kevin Jolver Montañez Taype
    ============================================================= */
 
 #include <iostream>
