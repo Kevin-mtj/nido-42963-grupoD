@@ -6,9 +6,9 @@
    Docente    : Carlos del Carpio
    Semestre   : 2026-20
    Compilador : Dev-C++ (MinGW / GCC, C++11 o superior)
-   NRC        :
-   Grupo      :
-   Integrantes:
+   NRC        : 42963
+   Grupo      : D
+   Integrantes: Bryan Joel Coaquira Mamani 
    ============================================================= */
 
 #include <iostream>
