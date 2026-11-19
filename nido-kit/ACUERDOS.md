@@ -6,7 +6,7 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 
 | Integrante | Rol | Requisitos o tareas | Revisa los PR de |
 |---|---|---|---|
-|  |  |  |  |
+| Bryan Joel Coaquira Mamani | Dev 1  | R1 | Kevin Jolver  |
 
 ## Como trabajamos
 
@@ -19,11 +19,11 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 
 ## Actas de reuniones
 
-### Acta 1 · fecha: ____ · medio: presencial / virtual
-- Asistentes:
-- Temas:
+### Acta 1 · fecha: 19/11/2026· medio: presencial / virtual
+- Asistentes: Todos los Integrantes
+- Temas: Avance del  V0.1
 - Acuerdos (que · quien · para cuando):
--
+- Que: avance del proyecto ; Quien: todos los integrantes ; Para cuando: Para el jueves 19 de Noviembre
 
 ### Acta 2 · fecha: ____
 - Asistentes:
