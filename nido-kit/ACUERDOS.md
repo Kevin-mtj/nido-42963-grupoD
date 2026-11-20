@@ -8,7 +8,7 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 |---|---|---|---|
 | Bryan Joel Coaquira Mamani | Dev 1  | R1, R2 | Kevin Jolver  |
 | Kevin Jolver Montañez Taype | Dev 2  | R3, R4 | Bryan Joel |
-
+| Alvarez Torres Jose Carlos | Dev3 |
 ## Como trabajamos
 
 - Horarios de trabajo y de reunion:
