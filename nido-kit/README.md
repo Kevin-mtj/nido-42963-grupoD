@@ -15,7 +15,7 @@ Estructura de Datos · Evaluacion C2 · Unidad 4 · 2026-20 · NRC `<NRC>` · Gr
 | Bryan Joel Coaquira Mamani | Bryan | Lider (scrum) |  |
 | Bryan Joel Coaquira Mamani | Bryan | Dev · arbol | R1, R2 |
 | Kevin Jolver Montañez Taype | kevin-mtj | Dev · grafo | R3, R4 |
-| Alvarez Torres Jose Carlos |  | Dev · alcance y archivo | R5, R6 |
+| Alvarez Torres Jose Carlos | Netizen | Dev · alcance y archivo | R5, R6 |
 |  |  | QA y documentacion | R7, pruebas |
 
 Tablero del equipo: `<enlace a GitHub Projects>` · Presentacion: `<enlace>`
