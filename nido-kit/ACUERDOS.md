@@ -8,7 +8,8 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 |---|---|---|---|
 | Bryan Joel Coaquira Mamani | Dev 1  | R1, R2 | Kevin Jolver  |
 | Kevin Jolver Montañez Taype | Dev 2  | R3, R4 | Bryan Joel |
-| Alvarez Torres Jose Carlos | Dev3 |R5|Rivaldo|
+| Alvarez Torres Jose Carlos | Dev3 |R5,R6|Rivaldo|
+| Rivaldo Marquez Ccahuana | Dev3 |R7,R6|Carlos|
 ## Como trabajamos
 
 - Horarios de trabajo y de reunion:
@@ -26,7 +27,7 @@ Si un acuerdo cambia, se actualiza aqui **con fecha**. Nada de borrar: se tacha 
 - Acuerdos (que · quien · para cuando):
 - Que: avance del proyecto ; Quien: todos los integrantes ; Para cuando: Para el jueves 19 de Noviembre
 
-### Acta 2 · fecha: ____
-- Asistentes:
-- Temas:
-- Acuerdos:
+### Acta 2 · fecha: 22/11/2026
+- Asistentes: Todos los integrantes
+- Temas: Avance del V1.0 y terminar la V0.5
+- Acuerdos: Correspondiente a cada integrante
