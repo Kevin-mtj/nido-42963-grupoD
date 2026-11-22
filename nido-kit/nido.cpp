@@ -146,7 +146,10 @@ int contarSiguiendo(int id) {
 
 int contarSeguidores(int id) {
     // TODO R3a
-    return 0;
+   int k = 0;
+	for (int x = 0; x < nUsuarios; x++) 
+	if (sigue[x][id] == 1) k++;
+	return k;
 }
 
 void difundir(int v, bool visto[], bool imprimir) {
@@ -265,9 +268,49 @@ if (orden == "registrar") {
         }
         else if (orden == "seguir") {
             // TODO R3b
+            if (a1 == "" || a2 == "") {
+                cout << "Uso: seguir @a @b" << endl;
+            }
+            else {
+                NodoUsuario *a = buscar(raiz, a1);
+                NodoUsuario *b = buscar(raiz, a2);
+
+                if (a == nullptr)
+                    cout << "E: No existe " << a1 << endl;
+                else if (b == nullptr)
+                    cout << "E: No existe " << a2 << endl;
+                else if (a == b)
+                    cout << "E: Una cuenta no puede seguirse a si misma" << endl;
+                else if (sigue[a->id][b->id] == 1)
+                    cout << "E: " << a1 << " ya sigue a " << a2 << endl;
+                else {
+                    sigue[a->id][b->id] = 1;
+                    cout << a1 << " ahora sigue a " << a2 << endl;
+                }
+            }
         }
         else if (orden == "dejar") {
             // TODO R3c
+            if (a1 == "" || a2 == "") {
+                cout << "Uso: dejar @a @b" << endl;
+            }
+            else {
+                NodoUsuario *a = buscar(raiz, a1);
+                NodoUsuario *b = buscar(raiz, a2);
+
+                if (a == nullptr)
+                    cout << "E: No existe " << a1 << endl;
+                else if (b == nullptr)
+                    cout << "E: No existe " << a2 << endl;
+                else if (a == b)
+                    cout << "E: Una cuenta no puede seguirse a si misma" << endl;
+                else if (sigue[a->id][b->id] == 0)
+                    cout << "E: " << a1 << " no sigue a " << a2 << endl;
+                else {
+                    sigue[a->id][b->id] = 0;
+                    cout << a1 << " dejo de seguir a " << a2 << endl;
+                }
+            }
         }
         else if (orden == "siguiendo") {
             NodoUsuario *u = buscar(raiz, a1);
@@ -280,12 +323,54 @@ if (orden == "registrar") {
         }
         else if (orden == "seguidores") {
             // TODO R3d
+            NodoUsuario *u = buscar(raiz, a1);
+            if (u == nullptr)
+                cout << "E: No existe " << a1 << endl;
+            else {
+                bool marca[MAX] = {false};
+
+                for (int x = 0; x < nUsuarios; x++)
+                    if (sigue[x][u->id] == 1) marca[x] = true;
+
+                imprimirMarcados("Seguidores de " + u->usuario, marca);
+            }
         }
         else if (orden == "mutuos") {
             // TODO R4a
+            NodoUsuario *u = buscar(raiz, a1);
+            if (u == nullptr)
+                cout << "E: No existe " << a1 << endl;
+            else {
+                bool marca[MAX] = {false};
+
+                for (int x = 0; x < nUsuarios; x++)
+                    if (sigue[u->id][x] == 1 &&
+                        sigue[x][u->id] == 1)
+                        marca[x] = true;
+
+                imprimirMarcados("Mutuos de " + u->usuario, marca);
+            }
         }
         else if (orden == "popular") {
             // TODO R4b
+            if (nUsuarios == 0) {
+                cout << "Popular: (sin cuentas)" << endl;
+            }
+            else {
+                int idMax = 0;
+                int maxSeguidores = -1;
+
+                for (int x = 0; x < nUsuarios; x++) {
+                    int k = contarSeguidores(x);
+
+                    if (k > maxSeguidores) {
+                        maxSeguidores = k;
+                        idMax = x;
+                    }
+                }
+                cout << "Popular: " << porId[idMax]->usuario
+                     << " | seguidores: " << maxSeguidores << endl;
+            }
         }
         else if (orden == "alcance") {
             // TODO R5b
