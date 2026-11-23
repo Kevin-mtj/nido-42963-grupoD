@@ -10,6 +10,7 @@
    Grupo      : D
    Integrantes: Bryan Joel Coaquira Mamani 
                 Kevin Jolver Montañez Taype
+				Alvarez Torres Jose Carlos
    ============================================================= */
 
 #include <iostream>
