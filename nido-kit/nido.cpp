@@ -11,6 +11,7 @@
    Integrantes: Bryan Joel Coaquira Mamani 
                 Kevin Jolver Montañez Taype
 				Alvarez Torres Jose Carlos
+				Marquez Ccahuana Rivaldo
    ============================================================= */
 
 #include <iostream>
@@ -178,6 +179,10 @@ void guardarPreorden(NodoUsuario *r, ofstream &f) {
 
 int liberar(NodoUsuario *r) {
     // TODO R7a
+	   if (r == nullptr) return 0;
+    int n = liberar(r->izq) + liberar(r->der); // Libera hijos
+    delete r;                                  // Libera raíz actual
+    return n + 1;                              // Suma este nodo
     return 0;
 }
 
@@ -497,6 +502,25 @@ if (orden == "registrar") {
         }
         else if (orden == "reporte") {
             // TODO R7b
+			int totalSeguimientos = 0;
+            int paresMutuos = 0;
+            
+            for (int i = 0; i < nUsuarios; i++) {
+                for (int j = 0; j < nUsuarios; j++) {
+                    if (sigue[i][j] == 1) totalSeguimientos++;
+                                                          // Si i sigue a j y j sigue a i (y no es uno mismo ojo)
+                    if (i != j && sigue[i][j] == 1 && sigue[j][i] == 1) {
+                        paresMutuos++;
+                    }
+                }
+            }
+            paresMutuos = paresMutuos / 2;                // Se cuenta doble (A->B y B->A)
+
+            cout << "Cuentas: " << nUsuarios 
+                 << " | seguimientos: " << totalSeguimientos 
+                 << " | pares mutuos: " << paresMutuos << endl;
+            cout << "Arbol: altura " << altura(raiz) 
+                 << " | hojas " << hojas(raiz) << endl;
         }
         else if (orden == "ayuda") ayuda();
         else if (orden == "salir") break;
