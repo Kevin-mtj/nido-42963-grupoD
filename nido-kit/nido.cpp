@@ -180,9 +180,9 @@ void guardarPreorden(NodoUsuario *r, ofstream &f) {
 int liberar(NodoUsuario *r) {
     // TODO R7a
 	   if (r == nullptr) return 0;
-    int n = liberar(r->izq) + liberar(r->der); // Libera hijos
-    delete r;                                  // Libera raíz actual
-    return n + 1;                              // Suma este nodo
+    int n = liberar(r->izq) + liberar(r->der); 
+    delete r;                                  
+    return n + 1;                              
     return 0;
 }
 
@@ -499,7 +499,8 @@ if (orden == "registrar") {
                 cout << "Cargado: " << contar(raiz) << " cuentas y " << m << " seguimientos | altura "
                      << altura(raiz) << endl;
             }
-        }
+        }   
+		}
         else if (orden == "reporte") {
             // TODO R7b
 			int totalSeguimientos = 0;
@@ -508,13 +509,13 @@ if (orden == "registrar") {
             for (int i = 0; i < nUsuarios; i++) {
                 for (int j = 0; j < nUsuarios; j++) {
                     if (sigue[i][j] == 1) totalSeguimientos++;
-                                                          // Si i sigue a j y j sigue a i (y no es uno mismo ojo)
+                                                          
                     if (i != j && sigue[i][j] == 1 && sigue[j][i] == 1) {
                         paresMutuos++;
                     }
                 }
             }
-            paresMutuos = paresMutuos / 2;                // Se cuenta doble (A->B y B->A)
+            paresMutuos = paresMutuos / 2;                
 
             cout << "Cuentas: " << nUsuarios 
                  << " | seguimientos: " << totalSeguimientos 
